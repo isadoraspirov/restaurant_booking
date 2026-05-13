@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant</title>
+</head>
+<body>
+
+    {% if restaurant %}
+
+        <h1>{{ restaurant.name }}</h1>
+        <p>{{ restaurant.description }}</p>
+
+        <p><strong>Address:</strong> {{ restaurant.address }}</p>
+        <p><strong>City:</strong> {{ restaurant.city }}</p>
+        <p><strong>Postcode:</strong> {{ restaurant.postcode }}</p>
+
+        <p><strong>Phone:</strong> {{ restaurant.phone }}</p>
+        <p><strong>Email:</strong> {{ restaurant.email }}</p>
+
+    {% else %}
+        <p>No restaurant info found in database.</p>
+    {% endif %}
+
+</body>
+</html>
