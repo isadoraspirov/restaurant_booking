@@ -1,24 +1,18 @@
+{% extends "base.html" %}
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
-<script src="{% static 'js/script.js' %}" defer></script>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Booking Confirmation</title>
-    <link rel="stylesheet" href="/static/css/style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Booking Submitted!</h1>
+{% block content %}
 
-        <p><strong>Name:</strong> {{ booking.name }}</p>
-        <p><strong>Date:</strong> {{ booking.date }}</p>
-        <p><strong>Time:</strong> {{ booking.time }}</p>
-        <p><strong>Guests:</strong> {{ booking.guests }}</p>
-        <p><strong>Status:</strong> {{ booking.status }}</p>
+<div class="container mt-5 pt-5">
+    <h1>Booking Submitted!</h1>
 
-        <a href="/" class="btn">Back Home</a>
-    </div>
-</body>
-</html>
+    <p><strong>Name:</strong> {{ booking.full_name }}</p>
+    <p><strong>Date:</strong> {{ booking.booking_date }}</p>
+    <p><strong>Time:</strong> {{ booking.booking_time }}</p>
+    <p><strong>Guests:</strong> {{ booking.number_of_guests }}</p>
+    <p><strong>Status:</strong> {{ booking.status }}</p>
+
+    <a href="{% url 'home' %}" class="btn btn-dark mt-3">Back Home</a>
+</div>
+
+{% endblock %}

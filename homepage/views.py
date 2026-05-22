@@ -1,12 +1,9 @@
 from django.shortcuts import render
 from .models import InfoRestaurant
 
-# Create your views here.
-def index(request):
+def home(request):
     restaurant = InfoRestaurant.objects.first()
 
-    context = {
+    return render(request, "homepage/home.html", {
         "restaurant": restaurant
-    }
-
-    return render(request, "homepage/home.html", context)
+    })

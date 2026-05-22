@@ -1,16 +1,11 @@
+{% extends "base.html" %}
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
-<script src="{% static 'js/script.js' %}" defer></script>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Restaurant</title>
-</head>
-<body>
+{% block content %}
+
+<div class="container mt-5 pt-5">
 
     {% if restaurant %}
-
         <h1>{{ restaurant.name }}</h1>
         <p>{{ restaurant.description }}</p>
 
@@ -21,9 +16,14 @@
         <p><strong>Phone:</strong> {{ restaurant.phone }}</p>
         <p><strong>Email:</strong> {{ restaurant.email }}</p>
 
+        <a href="{% url 'create_booking' %}" class="btn btn-dark mt-3">
+            Book a Table
+        </a>
+
     {% else %}
         <p>No restaurant info found in database.</p>
     {% endif %}
 
-</body>
-</html>
+</div>
+
+{% endblock %}

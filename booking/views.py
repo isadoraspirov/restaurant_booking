@@ -1,10 +1,9 @@
 from django.shortcuts import render, redirect
 from .forms import BookingForm
 
-# Create your views here.
 
 def booking_home(request):
-    return render(request, "bookings/booking_home.html")
+    return redirect("create_booking")
 
 
 def create_booking(request):
@@ -12,8 +11,10 @@ def create_booking(request):
         form = BookingForm(request.POST)
 
         if form.is_valid():
-            form.save()
-            return redirect("booking_success")
+            booking = form.save()
+            return render(request, "bookings/booking_success.html", {
+                "booking": booking
+            })
 
     else:
         form = BookingForm()
