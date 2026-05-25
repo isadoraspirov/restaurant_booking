@@ -1,0 +1,152 @@
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* CSS Variables */
+
+:root {
+
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Playfair Display", serif;
+  --accent-font: "Cormorant Garamond", serif;
+
+  /* Main Brand Palette */
+  --primary-color: #322515;          /* Deep espresso brown */
+  --secondary-color: #fef2de;        /* Warm cream / logo background */
+
+  /* Accent Colors */
+  --accent-color: #8ac9a1;           /* Sage green */
+  --accent-color-light: #9ed1e6;     /* Soft sky blue */
+
+  /* Warm Highlight Tones */
+  --gold-color: #b58023;             /* Rich golden bronze */
+  --gold-light: #f7d065;             /* Soft golden yellow */
+  --peach-accent: #f6b052;           /* Warm peach orange */
+
+  /* Neutral Supporting Tone */
+  --text-muted: #615b43;             /* Olive brown */
+
+}
+
+#navbar {
+    background-color: var(--secondary-color);
+    min-height: 75px;
+    position: relative;
+}
+
+/* Center logo */
+.navbar-logo-centered {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1050;
+}
+
+/* Logo image */
+.navbar-logo-centered img {
+    height: 70px;
+    width: auto;
+}
+
+/* Navbar links */
+.navbar-nav .nav-link {
+    font-family: var(--secondary-font);
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+/* Navbar hover effect */
+.navbar-nav .nav-link:hover {
+    color: var(--accent-color);
+}
+
+/* Mobile menu */
+@media (max-width: 991px) {
+
+    .navbar-collapse {
+        background-color: var(--secondary-color);
+        margin-top: 20px;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .navbar-nav {
+        padding-top: 20px;
+    }
+
+}
+
+/* Button */
+
+.custom-button-filled {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: none;
+    font-family: var(--secondary-font);
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.custom-button-filled:hover {
+    background-color: var(--gold-color);
+    color: var(--secondary-color);
+}
+
+/* HERO SECTION */
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-image: url("../images/image-hero.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+/* Dark shade overlay */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* Content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 20px;
+}
+
+/* Main title */
+.hero-title {
+    font-family: var(--secondary-font);
+    font-size: 5rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+/* Subtitle */
+.hero-subtitle {
+    font-family: var(--secondary-font);
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+/* Button */
+.hero-btn {
+    padding: 12px 28px;
+    font-size: 1rem;
+}

@@ -24,56 +24,97 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-
+    
     <!-- Navbar -->
-    <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-light bg-light shadow-sm">
-
+     
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top shadow-sm">
         <div class="container-fluid position-relative">
+            
+            <!-- Centered logo -->
+             
+            <a class="navbar-brand navbar-logo-centered"href="{% url 'home' %}">
+            
+            <img src="{% static 'images/logo.png' %}"alt="The Booking Table"height="75">
+        </a>
 
-            <!-- Brand -->
-            <a class="navbar-brand position-absolute start-50 translate-middle-x" href="{% url 'home' %}">
-                The Booking Table
-            </a>
+        <!-- Hamburger button -->
+        <button class="navbar-toggler ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
 
-            <!-- Toggler -->
-            <button class="navbar-toggler ms-auto"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                <span class="navbar-toggler-icon"></span>
-            </button>      
+        <!-- Collapsible menu -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 
-                <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto align-items-center">
 
-                    <li class="nav-item">
-                        <a class="nav-link active" href="{% url 'home' %}">Home</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'home' %}">
+                        Home
+                    </a>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#menu">Menu</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#menu">
+                        Menu
+                    </a>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">
+                        Contact
+                    </a>
+                </li>
 
-                    <li class="nav-item ms-lg-3">
-                        <a href="{% url 'create_booking' %}" class="btn btn-sm custom-button-filled">
-                            Book now
-                        </a>
-                    </li>
+                <li class="nav-item ms-lg-3">
+                    <a href="{% url 'create_booking' %}"
+                       class="btn custom-button-filled">
 
-                </ul>
+                        Book now
+                    </a>
+                </li>
 
-            </div>
+            </ul>
+
         </div>
-    </nav>
+
+    </div>
+
+</nav>
 
     <!-- Page content goes here -->
+
+    <!-- Hero Section -->
+     <section class="hero-section">
+
+    <!-- Overlay -->
+     <div class="hero-overlay"></div>
+
+    <!-- Hero Content -->
+    <div class="hero-content text-center">
+
+        <h1 class="hero-title">
+            The Booking Table
+        </h1>
+
+        <p class="hero-subtitle">
+            Bringing people together through simple and flavour food
+        </p>
+
+        <a href="{% url 'create_booking' %}" class="btn custom-button-filled hero-btn">
+            Reserve Your Table
+        </a>
+
+    </div>
+
+</section>
+
     {% block content %}
     {% endblock %}
 
