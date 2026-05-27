@@ -27,6 +27,10 @@
 
 }
 
+body {
+    background-color: var(--secondary-color);
+}
+
 #navbar {
     background-color: var(--secondary-color);
     min-height: 75px;
@@ -160,19 +164,26 @@
 }
 
 /* Booking card */
+
 .booking-card {
     max-width: 700px;
     margin: auto;
-    background-color: white;
     padding: 50px;
     border-radius: 25px;
 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    background: rgba(255, 255, 255, 0.55);
+
+    border: 1px solid rgba(138, 201, 161, 0.25);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow: 0 10px 30px rgba(50, 37, 21, 0.08);
 }
 
 /* Title */
 .booking-title {
-    font-family: var(--main-font);
+    font-family: var(--secondary-font);
     font-size: 3rem;
     color: var(--primary-color);
     margin-bottom: 10px;
@@ -181,7 +192,7 @@
 /* Subtitle */
 .booking-subtitle {
     font-family: var(--primary-font);
-    color: var(--text-color);
+    color: var(--primary-color);
     margin-bottom: 40px;
 }
 
@@ -190,7 +201,6 @@
     display: block;
     margin-bottom: 8px;
     margin-top: 20px;
-
     font-family: var(--primary-font);
     font-weight: 600;
     color: var(--primary-color);
