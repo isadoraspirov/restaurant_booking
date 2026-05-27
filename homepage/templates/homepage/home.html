@@ -3,27 +3,75 @@
 
 {% block content %}
 
-<div class="container mt-5 pt-5">
+<!-- INFO SECTION -->
+<section class="info-section">
 
-    {% if restaurant %}
-        <h1>{{ restaurant.name }}</h1>
-        <p>{{ restaurant.description }}</p>
+    <div class="container">
 
-        <p><strong>Address:</strong> {{ restaurant.address }}</p>
-        <p><strong>City:</strong> {{ restaurant.city }}</p>
-        <p><strong>Postcode:</strong> {{ restaurant.postcode }}</p>
+        <div class="row g-5 align-items-start">
 
-        <p><strong>Phone:</strong> {{ restaurant.phone }}</p>
-        <p><strong>Email:</strong> {{ restaurant.email }}</p>
+            <!-- Contact -->
+            <div class="col-lg-6" id="contact">
 
-        <a href="{% url 'create_booking' %}" class="btn btn-dark mt-3">
-            Book a Table
-        </a>
+                <h2 class="section-title">
+                    Contact
+                </h2>
 
-    {% else %}
-        <p>No restaurant info found in database.</p>
-    {% endif %}
+                <div class="info-item">
+                    <h5>Address</h5>
+                    <p>{{ restaurant.address }}</p>
+                    <p>{{ restaurant.city }}, {{ restaurant.postcode }}</p>
+                </div>
 
-</div>
+                <div class="info-item">
+                    <h5>Phone</h5>
+                    <p>{{ restaurant.phone }}</p>
+                </div>
+
+                <div class="info-item">
+                    <h5>Email</h5>
+                    <p>{{ restaurant.email }}</p>
+                </div>
+
+            </div>
+
+            <!-- Opening Hours -->
+            <div class="col-lg-6">
+
+                <h2 class="section-title">
+                    Opening Hours
+                </h2>
+
+                <div class="opening-hours">
+
+                    <div class="hours-row">
+                        <span>Monday - Thursday</span>
+                        <span>17:00 - 22:00</span>
+                    </div>
+
+                    <div class="hours-row">
+                        <span>Friday</span>
+                        <span>17:00 - 23:00</span>
+                    </div>
+
+                    <div class="hours-row">
+                        <span>Saturday</span>
+                        <span>12:00 - 23:00</span>
+                    </div>
+
+                    <div class="hours-row">
+                        <span>Sunday</span>
+                        <span>12:00 - 21:00</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 {% endblock %}

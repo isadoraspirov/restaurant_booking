@@ -3,16 +3,60 @@
 
 {% block content %}
 
-<div class="container mt-5 pt-5">
-    <h1>Booking Submitted!</h1>
+<section class="booking-success-section">
 
-    <p><strong>Name:</strong> {{ booking.full_name }}</p>
-    <p><strong>Date:</strong> {{ booking.booking_date }}</p>
-    <p><strong>Time:</strong> {{ booking.booking_time }}</p>
-    <p><strong>Guests:</strong> {{ booking.number_of_guests }}</p>
-    <p><strong>Status:</strong> {{ booking.status }}</p>
+    <div class="container">
 
-    <a href="{% url 'home' %}" class="btn btn-dark mt-3">Back Home</a>
-</div>
+        <div class="booking-success-card text-center">
+
+            <h1 class="success-title">
+                Booking Confirmed!
+            </h1>
+
+            <p class="success-subtitle">
+                Thank you for your reservation.
+            </p>
+
+            <div class="booking-details">
+
+                <p>
+                    <strong>Name:</strong>
+                    {{ booking.full_name }}
+                </p>
+
+                <p>
+                    <strong>Date:</strong>
+                    {{ booking.booking_date }}
+                </p>
+
+                <p>
+                    <strong>Time:</strong>
+                    {{ booking.booking_time }}
+                </p>
+
+                <p>
+                    <strong>Guests:</strong>
+                    {{ booking.number_of_guests }}
+                </p>
+
+                <p>
+                    <strong>Status:</strong>
+                    {{ booking.status }}
+                </p>
+
+            </div>
+
+            <a href="{% url 'home' %}"
+               class="btn custom-button-filled mt-4">
+
+                Back Home
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 {% endblock %}

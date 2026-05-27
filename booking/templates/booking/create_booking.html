@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section class="booking-section">
+
+    <div class="container">
+
+        <div class="booking-card">
+
+            <h1 class="booking-title">
+                Reserve Your Table
+            </h1>
+
+            <p class="booking-subtitle">
+                Complete the form below to confirm your reservation.
+            </p>
+
+            <form method="POST" class="booking-form">
+
+                {% csrf_token %}
+
+                {% if form.errors %}
+                
+                    <div class="alert alert-danger">
+                        
+                        {{ form.errors }}
+                    </div>
+                    
+                    {% endif %}
+
+                {{ form.as_p }}
+
+                <button type="submit"
+                        class="btn custom-button-filled mt-3">
+
+                    Confirm Reservation
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
