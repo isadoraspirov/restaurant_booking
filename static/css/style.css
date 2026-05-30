@@ -157,7 +157,8 @@ body {
 
 /* BOOKING SECTION */
 
-.booking-section {
+.booking-section,
+.booking-success-section {
     padding: 140px 20px 100px;
     background-color: var(--background-color);
     min-height: 100vh;
@@ -165,7 +166,8 @@ body {
 
 /* Booking card */
 
-.booking-card {
+.booking-card,
+.booking-success-card {
     max-width: 700px;
     margin: auto;
     padding: 50px;
@@ -182,15 +184,19 @@ body {
 }
 
 /* Title */
-.booking-title {
+.booking-title,
+.success-title, 
+.section-title {
     font-family: var(--secondary-font);
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--primary-color);
     margin-bottom: 10px;
 }
 
 /* Subtitle */
-.booking-subtitle {
+.booking-subtitle,
+.success-subtitle,
+.info-item {
     font-family: var(--primary-font);
     color: var(--primary-color);
     margin-bottom: 40px;
@@ -223,4 +229,155 @@ body {
 .booking-btn {
     margin-top: 30px;
     padding: 12px 30px;
+}
+
+.info-card {
+    height: 100%;
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(138, 201, 161, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(50, 37, 21, 0.08);
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 15px 40px rgba(50, 37, 21, 0.12);
+}
+
+/* Contact section */
+
+.info-item {
+    margin-bottom: 25px;
+}
+
+.info-item h5 {
+    font-family: var(--secondary-font);
+    color: var(--gold-color);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.info-item p {
+    margin-bottom: 4px;
+    font-family: var(--primary-font);
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Opening Hours */
+
+.opening-hours {
+    margin-top: 20px;
+}
+
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid rgba(50, 37, 21, 0.1);
+}
+
+.hours-row:last-child {
+    border-bottom: none;
+}
+
+.hours-row span:first-child {
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.hours-row span:last-child {
+    font-family: var(--secondary-font);
+    color: var(--gold-color);
+    font-weight: 600;
+}
+
+
+/* Card title */
+
+.section-title {
+    margin-bottom: 30px;
+}
+
+.menu-card {
+    height: 100%;
+    padding: 30px;
+    border-radius: 25px;
+
+    background: rgba(138, 201, 161, 0.12);
+
+    border: 1px solid rgba(138, 201, 161, 0.25);
+
+    box-shadow: 0 8px 25px rgba(50, 37, 21, 0.05);
+
+    transition: all 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-4px);
+
+    background: rgba(138, 201, 161, 0.18);
+}
+
+.menu-section {
+    padding: 100px 0;
+}
+
+.menu-category {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.menu-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.menu-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px;
+    flex-shrink: 0;
+}
+
+.menu-content {
+    flex: 1;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+.menu-header h4 {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.menu-price {
+    color: var(--gold-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.menu-content p {
+    color: var(--text-muted);
+    margin: 0;
 }
