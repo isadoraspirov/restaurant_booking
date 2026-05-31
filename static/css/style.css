@@ -8,22 +8,14 @@
   --primary-font: "Poppins", sans-serif;
   --secondary-font: "Playfair Display", serif;
   --accent-font: "Cormorant Garamond", serif;
-
-  /* Main Brand Palette */
-  --primary-color: #322515;          /* Deep espresso brown */
-  --secondary-color: #fef2de;        /* Warm cream / logo background */
-
-  /* Accent Colors */
-  --accent-color: #8ac9a1;           /* Sage green */
-  --accent-color-light: #9ed1e6;     /* Soft sky blue */
-
-  /* Warm Highlight Tones */
-  --gold-color: #b58023;             /* Rich golden bronze */
-  --gold-light: #f7d065;             /* Soft golden yellow */
-  --peach-accent: #f6b052;           /* Warm peach orange */
-
-  /* Neutral Supporting Tone */
-  --text-muted: #615b43;             /* Olive brown */
+  --primary-color: #322515;          
+  --secondary-color: #fef2de;        
+  --accent-color: #8ac9a1;           
+  --accent-color-light: #9ed1e6;    
+  --gold-color: #b58023;             
+  --gold-light: #f7d065;            
+  --peach-accent: #f6b052;           
+  --text-muted: #615b43;          
 
 }
 
@@ -39,7 +31,7 @@ body {
 
 /* Center logo */
 .navbar-logo-centered {
-    position: absolute;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1050;
@@ -380,4 +372,9 @@ body {
 .menu-content p {
     color: var(--text-muted);
     margin: 0;
+}
+
+.booking-section,
+.booking-success-section {
+    background: rgba(138, 201, 161, 0.12);
 }
