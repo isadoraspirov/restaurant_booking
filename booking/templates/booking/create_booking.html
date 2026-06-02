@@ -10,14 +10,20 @@
         <div class="booking-card">
 
             <h1 class="booking-title">
+                
+                {% if editing %}
+                Edit Your Reservation
+                {% else %}
                 Reserve Your Table
+                {% endif %}
+            
             </h1>
 
             <p class="booking-subtitle">
                 Complete the form below to confirm your reservation.
             </p>
 
-            <form method="POST" class="booking-form">
+            <form method="POST" class="booking-form" id="form">
 
                 {% csrf_token %}
 
@@ -35,7 +41,11 @@
                 <button type="submit"
                         class="btn custom-button-filled mt-3">
 
+                    {% if editing %}
+                    Update Reservation
+                    {% else %}
                     Confirm Reservation
+                    {% endif %}
 
                 </button>
 
