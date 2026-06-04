@@ -3,15 +3,14 @@ from .models import BookingRequest
 
 
 class BookingForm(forms.ModelForm):
-
+    
     booking_date = forms.DateField(
-        input_formats=["%d/%m/%Y"],
-        widget=forms.DateInput(
-            attrs={
-                "placeholder": "DD/MM/YYYY"
-            }
-        )
+    widget=forms.DateInput(
+        attrs={
+            "type": "date"
+        }
     )
+)
     
     class Meta:
         model = BookingRequest
