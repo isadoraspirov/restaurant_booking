@@ -17,9 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const guests = document.getElementById("id_number_of_guests");
 
         // Name validation
-        if (fullName.value.trim().length < 2) {
+        if (fullName.value.trim().length < 4) {
             errors.push(
-                "Name must contain at least 2 characters."
+                "Name must contain at least 4 characters."
             );
         }
 

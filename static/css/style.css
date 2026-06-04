@@ -378,3 +378,22 @@ body {
 .booking-success-section {
     background: rgba(138, 201, 161, 0.12);
 }
+
+#footer {
+    background-color:  rgba(138, 201, 161, 0.18);
+    margin-top: 4rem;
+}
+
+#footer, h5 {
+    font-family: var(--secondary-font);
+}
+
+.social-link {
+    font-family: var(--primary-font);
+    color: var(--gold-color);
+} 
+
+.footer-link {
+    font-family: var(--primary-color);
+    color: var(--primary-color);
+}
