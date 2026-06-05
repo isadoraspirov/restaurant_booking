@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (phone.value.trim() !== "") {
 
             const phonePattern =
-                /^[0-9+\-\s()]{8,20}$/;
+                /^[0-9+\-\s()]{11,20}$/;
 
             if (!phonePattern.test(phone.value.trim())) {
                 errors.push(
