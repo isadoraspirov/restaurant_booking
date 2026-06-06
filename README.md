@@ -53,3 +53,160 @@ The strategy focuses on creating an elegant and welcoming restaurant website tha
 - Google Maps integration showing restaurant location.
 - Table availability checker.
 - Customer reviews and ratings.
+
+## Structure
+
+The website structure guides users from discovering the restaurant to completing a reservation.
+
+**Homepage**
+
+- Hero image and welcome message.
+- "Reserve Your Table" call-to-action button.
+- Menu preview.
+- Contact information.
+- Opening hours.
+
+**Booking Page**
+
+- Reservation form.
+- Customer details input.
+- Date and time selection.
+- Number of guests selection.
+- Message require reservation.
+- Form validation.
+
+**Booking Confirmation Page**
+
+- Confirmation message.
+- Reservation details summary.
+- Button to edit reservation.
+- Button back to homepage.
+
+**Footer**
+
+- Copyright information.
+- Navigation links.
+- Contact details.
+
+## Information Architecture
+
+**Navigation**
+
+Sticky navigation bar containing:
+
+**Home | Menu | Contact | Book Now**
+
+## Page Hierarchy
+
+### Homepage
+
+- Hero Section
+- Menu Section
+- Contact Information
+- Opening Hours
+
+### Booking Page
+
+- Reservation Form
+- Validation Messages
+
+### Confirmation Page
+
+- Booking Summary
+- Return Home Button
+- Edit Reservation Button
+
+### Interaction
+
+- Navigation links for smooth browsing.
+- Form validation for reservation submissions.
+- Dynamic booking confirmation page.
+- Responsive menu cards with hover effects.
+- Mobile-friendly navigation menu.
+
+## Skeleton
+
+### Priority Content**
+
+**High Priority**
+
+- Reserve Your Table call-to-action button.
+- Online booking form.
+- Restaurant menu.
+- Contact information.
+- Medium Priority
+- Opening hours section.
+- Booking confirmation page.
+
+**Low Priority**
+
+- Footer with additional information and navigation links.
+- Future enhancements such as Google Maps and customer reviews.
+
+## User Stories
+
+### User Story 1: View Restaurant Overview
+
+**Story:**
+
+As a visitor I can view the restaurant homepage so that I can quickly understand what the restaurant offers.
+
+**Acceptance Criteria:**
+
+- The homepage displays restaurant name, short description, and branding.
+- The homepage shows address and contact information.
+- The homepage shows opening hours.
+- The homepage contains a clear "Book a Table" button linking to booking page.
+- The page is responsive on mobile and desktop.
+
+### User Story 2: Submit a Booking Request
+
+**Story:**
+
+As a customer I can submit a booking request form so that I can request a table reservation.
+
+**Acceptance Criteria:**
+
+- Form includes required fields: name, email/phone, date request, time request, number of guests.
+- Form includes optional field: special requests/message.
+- Form cannot be submitted with empty required fields.
+- Validation errors are shown if invalid data is entered.
+- On successful submission, request is saved in the database.
+- User sees a success message after submission and can edit reservation details.
+
+### User Story 3: Admin View Booking Requests
+
+**Story:**
+
+As an admin I can view all booking requests so that I can respond and manage reservations.
+
+**Acceptance Criteria:**
+
+- Admin can view booking requests in Django Admin or a dashboard.
+- Requests show key info: customer name, date, time, guests, message.
+- Requests are ordered by newest first.
+
+### User Story 4: Admin Update Request Status
+
+**Story:**
+
+As an admin I can update the request status so that I can track whether the booking is confirmed or rejected.
+
+**Acceptance Criteria:**
+
+- Each request has a status (Pending, Confirmed, Rejected).
+- Default status is Pending when created.
+- Admin can update the status manually.
+- Updated status is saved and displayed correctly.
+
+### User Story 5: Admin Manage Restaurant Info
+
+**Story:**
+
+As an admin I can update restaurant information so that the website stays accurate.
+
+**Acceptance Criteria:**
+
+- Admin can edit restaurant details (address, phone, email).
+- Admin can update opening hours.
+- Changes are reflected on the public website.

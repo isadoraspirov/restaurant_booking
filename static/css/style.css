@@ -250,7 +250,7 @@ body {
 
 .info-item h5 {
     font-family: var(--secondary-font);
-    color: var(--gold-color);
+    color: var(--primary-color);
     font-size: 1.1rem;
     margin-bottom: 8px;
 }
@@ -290,7 +290,7 @@ body {
 
 .hours-row span:last-child {
     font-family: var(--secondary-font);
-    color: var(--gold-color);
+    color: var(--primary-color);
     font-weight: 600;
 }
 
@@ -364,7 +364,7 @@ body {
 }
 
 .menu-price {
-    color: var(--gold-color);
+    color: var(--primary-color);
     font-size: 1.2rem;
     font-weight: 700;
 }
@@ -388,12 +388,9 @@ body {
     font-family: var(--secondary-font);
 }
 
-.social-link {
+.social-link,
+.footer-link {
     font-family: var(--primary-font);
-    color: var(--gold-color);
+    color: var(--primary-color);
 } 
 
-.footer-link {
-    font-family: var(--primary-color);
-    color: var(--primary-color);
-}
