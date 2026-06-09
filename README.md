@@ -217,7 +217,7 @@ As an admin I can update restaurant information so that the website stays accura
 
 **Navigation Bar**
 
-![Navbar](statistic/images/navbar-restaurant.webp)
+![Navbar](static/images/navbar-restaurant.webp)
 
 - Fixed-top responsive navigation bar built with Bootstrap.
 - Provides quick access to the Home, Menu,  Contact, and Booking sections.
