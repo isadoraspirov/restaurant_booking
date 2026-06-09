@@ -226,7 +226,7 @@ As an admin I can update restaurant information so that the website stays accura
 
 **Hero Section**
 
-![Hero Section](statistic/images/hero-section.webp)
+![Hero Section](static/images/hero-section.webp)
 
 - Full-width hero section introducing The Booking Table.
 - Clear call-to-action button encouraging users to reserve a table.
@@ -234,8 +234,8 @@ As an admin I can update restaurant information so that the website stays accura
 
 **Menu Section**
 
-![Menu1](statistic/images/menu1.webp)
-![Menu2](statistic/images/menu2.webp)
+![Menu1](static/images/menu1.webp)
+![Menu2](static/images/menu2.webp)
 
 - Organised menu categories including Starters, Main Courses, and Desserts.
 - Responsive menu cards displaying:
@@ -247,7 +247,7 @@ As an admin I can update restaurant information so that the website stays accura
 
 **Restaurant Information Section**
 
-![Restaurant Information](statistic/images/contact-hours.webp)
+![Restaurant Information](static/images/contact-hours.webp)
 
 - Displays restaurant contact details including:
 1. Address
@@ -257,8 +257,8 @@ As an admin I can update restaurant information so that the website stays accura
 
 **Online Reservation System**
 
-![Booking 1](statistic/images/booking-reservation1.webp)
-![Booking 2](statistic/images/booking-reservation2.webp)
+![Booking 1](static/images/booking-reservation1.webp)
+![Booking 2](static/images/booking-reservation2.webp)
 
 - Reservation form built using Django Forms.
 - Users can submit:
@@ -271,7 +271,7 @@ As an admin I can update restaurant information so that the website stays accura
 
 **Booking Confirmation**
 
-![Booking Confirmation](statistic/images/booking-confirmation.webp)
+![Booking Confirmation](static/images/booking-confirmation.webp)
 
 - Users receive a confirmation page after successful submission.
 - Reservation details are displayed clearly.
@@ -279,7 +279,7 @@ As an admin I can update restaurant information so that the website stays accura
 
 **Footer**
 
-![Footer](statistic/images/footer-restaurant.webp)
+![Footer](static/images/footer-restaurant.webp)
 
 - Restaurant contact information details.
 - Social media links.
