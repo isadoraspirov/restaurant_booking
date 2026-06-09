@@ -212,3 +212,103 @@ As an admin I can update restaurant information so that the website stays accura
 - Admin can edit restaurant details (address, phone, email).
 - Admin can update opening hours.
 - Changes are reflected on the public website.
+
+## Features 
+
+**Navigation Bar**
+
+![Navbar](statistic/images/navbar-restaurant.webp)
+
+- Fixed-top responsive navigation bar built with Bootstrap.
+- Provides quick access to the Home, Menu,  Contact, and Booking sections.
+- Mobile-friendly hamburger menu for smaller devices.
+- Restaurant logo links users back to the homepage.
+
+**Hero Section**
+
+![Hero Section](statistic/images/hero-section.webp)
+
+- Full-width hero section introducing The Booking Table.
+- Clear call-to-action button encouraging users to reserve a table.
+- Visually engaging design to create a welcoming first impression.
+
+**Menu Section**
+
+![Menu1](statistic/images/menu1.webp)
+![Menu2](statistic/images/menu2.webp)
+
+- Organised menu categories including Starters, Main Courses, and Desserts.
+- Responsive menu cards displaying:
+1. Dish image
+2. Dish name
+3. Description
+4. Price
+- Easy-to-read layout for desktop and mobile users.
+
+**Restaurant Information Section**
+
+![Restaurant Information](statistic/images/contact-hours.webp)
+
+- Displays restaurant contact details including:
+1. Address
+2. Phone number
+3. Email address
+- Dedicated opening hours section showing weekly availability.
+
+**Online Reservation System**
+
+![Booking 1](statistic/images/booking-reservation1.webp)
+![Booking 2](statistic/images/booking-reservation2.webp)
+
+- Reservation form built using Django Forms.
+- Users can submit:
+1. Full name
+2. Booking date
+3. Booking time
+4. Number of guests
+- Form validation prevents invalid submissions.
+- Data is stored in the database using Django models.
+
+**Booking Confirmation**
+
+![Booking Confirmation](statistic/images/booking-confirmation.webp)
+
+- Users receive a confirmation page after successful submission.
+- Reservation details are displayed clearly.
+- Includes navigation back to the homepage.
+
+**Footer**
+
+![Footer](statistic/images/footer-restaurant.webp)
+
+- Restaurant contact information details.
+- Social media links.
+
+**Responsive Design**
+
+- Mobile-first responsive layout using Bootstrap 5.
+- Optimised for desktop, tablet, and mobile devices.
+- Consistent user experience across screen sizes.
+
+## Technologies Used
+
+**Languages**
+
+- HTML5
+- CSS3
+- JavaScript
+- Python
+
+## Frameworks & Libraries
+
+- Django
+- Bootstrap 5.3
+
+## Database
+
+## Tools & Services
+
+- GitHub Pages (Documentation)
+- Heroku (Deployment)
+- Google Fonts
+- Font Awesome
