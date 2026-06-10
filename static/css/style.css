@@ -248,7 +248,7 @@ body {
     margin-bottom: 25px;
 }
 
-.info-item h5, h3 {
+.info-item h5, h4, h3 {
     font-family: var(--secondary-font);
     color: var(--primary-color);
     font-size: 1.1rem;
@@ -384,7 +384,7 @@ body {
     margin-top: 4rem;
 }
 
-#footer, h5 {
+#footer, h3 {
     font-family: var(--secondary-font);
 }
 
