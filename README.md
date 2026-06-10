@@ -312,3 +312,11 @@ As an admin I can update restaurant information so that the website stays accura
 - Heroku (Deployment)
 - Google Fonts
 - Font Awesome
+
+## Automated Testing with Lighthouse
+
+![Lighthouse](static/images/lighthouse-validation.png)
+
+## HTML, CSS and JShint validation
+
+![HTML](static/images/html-validation.png)
