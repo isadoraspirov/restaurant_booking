@@ -315,8 +315,8 @@ As an admin I can update restaurant information so that the website stays accura
 
 ## Automated Testing with Lighthouse
 
-![Lighthouse](static/images/lighthouse-validation.png)
+![Lighthouse](static/images/lighthouse-validation.webp)
 
 ## HTML, CSS and JShint validation
 
-![HTML](static/images/html-validation.png)
+![HTML](static/images/html-validation.webp)
