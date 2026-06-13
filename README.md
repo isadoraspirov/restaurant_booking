@@ -2,6 +2,10 @@
 
 ![Mockup](static/images/mockup.webp)
 
+## Repository
+
+[GitHub Repository](https://github.com/isadoraspirov/restaurant_booking)
+
 The Booking Table is a restaurant booking website project designed to showcase full-stack web development skills using Django, HTML, CSS, Bootstrap, JavaScript, and database integration. The website provides users with a simple and convenient way to explore the restaurant menu, learn about the restaurant, and reserve tables online.
 
 The project focuses on usability, responsive design, and efficient booking management. Users can browse menu categories, view restaurant information, and complete an online reservation form. The website is designed as an educational portfolio project demonstrating practical implementation of a booking system and CRUD functionality.
@@ -306,12 +310,81 @@ As an admin I can update restaurant information so that the website stays accura
 
 ## Database
 
+The project uses PostgreSQL as the production database and SQLite3 during development.
+
 ## Tools & Services
 
-- GitHub Pages (Documentation)
-- Heroku (Deployment)
-- Google Fonts
-- Font Awesome
+**Development Tools**
+
+- Git
+- GitHub
+- VS Code
+- Heroku
+- PostgreSQL
+- Django Admin
+
+**Design Tools**
+
+- Canva
+
+**Validation Tools**
+
+- W3C HTML Validator
+- W3C CSS Validator
+- JSHint
+- Lighthouse
+
+## Manual Testing
+
+The website was manually tested across multiple browsers and devices.
+
+![Manual Testing](static/images/manual-testing.webp)
+
+**Browser Compatibility**
+
+Tested and confirmed working on:
+
+- Google Chrome
+- Mozilla Firefox
+- Microsoft Edge
+- Safari
+
+**Responsiveness**
+
+Verified on:
+
+- Mobile devices
+- Tablets
+- Desktop screens
+
+## User Stories Testing
+
+**User Story 1 — View Restaurant Overview**
+
+- Homepage displays restaurant information	
+- CTA redirects correctly	
+- Responsive design
+
+**User Story 2 — Submit Booking Request**
+
+- Form validation with success
+- Data saved with success
+- Confirmation displayed
+
+**User Story 3 — Admin View Booking Requests**
+
+- Admin sees bookings	
+- Ordered correctly
+
+**User Story 4 — Admin Update Status**
+
+- Status editable
+- Updates stored
+
+**User Story 5 — Admin Manage Restaurant Info**
+
+- Admin edits details
+- Website updates
 
 ## Automated Testing with Lighthouse
 
@@ -320,3 +393,81 @@ As an admin I can update restaurant information so that the website stays accura
 ## HTML, CSS and JShint validation
 
 ![HTML](static/images/html-validation.webp)
+![CSS](static/images/CSS-validation.webp)
+![JAVASCRIPT](static/images/javascript-validation.webp)
+
+## Known Issues
+
+- Booking availability is not restricted by real-time table capacity.
+- Email confirmation functionality not yet implemented.
+- Google Maps integration planned for future development.
+
+## Future Features
+
+Planned future improvements:
+
+- Customer login and registration
+- Email booking confirmation
+- Booking availability checker
+- Admin booking dashboard
+- Restaurant reviews and ratings
+- Online ordering system
+
+## Deployment
+
+The project is deployed using Heroku.
+
+**Deployment Steps**
+
+1. Create a Heroku account.
+2. Create a new app.
+3. Connect GitHub repository.
+4. Configure environment variables:
+- SECRET_KEY
+- DATABASE_URL
+5. Add Heroku PostgreSQL.
+6. Deploy from GitHub.
+7. Open the deployed application.
+
+**Clone Repository**
+
+git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+
+**Fork Repository**
+
+- Open repository.
+- Click Fork.
+- Clone your fork locally.
+
+## Credits
+
+**Content**
+
+- Restaurant content created for educational purposes.
+
+**Media**
+
+Images generetade via AI.
+
+**Technologies**
+
+Django Documentation
+Bootstrap Documentation
+
+**Artificial Intelligence Usage**
+
+Artificial Intelligence (AI) tools were used during the development of this project to support planning, documentation, and code improvement.
+
+- Assisted in writing and refining project documentation.
+- Helped organise README sections and project structure.
+- Supported debugging and troubleshooting during development.
+- Generated suggestions for improving accessibility and responsiveness.
+- Assisted with planning user stories and testing scenarios.
+
+All code implementation, testing, debugging, and final decisions were completed and reviewed manually. AI-generated suggestions were evaluated and adapted to fit project requirements.
+
+**Acknowledgements**
+
+Special thanks to:
+
+Mentor Kevin Loughrey for his guidance, support, and feedback throughout the project.
