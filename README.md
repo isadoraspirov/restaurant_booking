@@ -6,6 +6,15 @@
 
 [GitHub Repository](https://github.com/isadoraspirov/restaurant_booking)
 
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Testing](#manual-testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
+
+## Introduction
+
 The Booking Table is a restaurant booking website project designed to showcase full-stack web development skills using Django, HTML, CSS, Bootstrap, JavaScript, and database integration. The website provides users with a simple and convenient way to explore the restaurant menu, learn about the restaurant, and reserve tables online.
 
 The project focuses on usability, responsive design, and efficient booking management. Users can browse menu categories, view restaurant information, and complete an online reservation form. The website is designed as an educational portfolio project demonstrating practical implementation of a booking system and CRUD functionality.
@@ -78,7 +87,7 @@ The website structure guides users from discovering the restaurant to completing
 - Customer details input.
 - Date and time selection.
 - Number of guests selection.
-- Message require reservation.
+- Special requests message.
 - Form validation.
 
 **Booking Confirmation Page**
@@ -132,22 +141,21 @@ Sticky navigation bar containing:
 
 ## Skeleton
 
-### Priority Content**
+### Priority Content
 
 **High Priority**
+- Reserve Your Table CTA
+- Online booking form
+- Restaurant menu
+- Contact information
 
-- Reserve Your Table call-to-action button.
-- Online booking form.
-- Restaurant menu.
-- Contact information.
-- Medium Priority
-- Opening hours section.
-- Booking confirmation page.
+**Medium Priority**
+- Opening hours
+- Booking confirmation page
 
 **Low Priority**
-
-- Footer with additional information and navigation links.
-- Future enhancements such as Google Maps and customer reviews.
+- Footer
+- Future enhancements
 
 ## User Stories
 
@@ -312,6 +320,34 @@ As an admin I can update restaurant information so that the website stays accura
 
 The project uses PostgreSQL as the production database and SQLite3 during development.
 
+## Database Design
+
+**Models:**
+
+Booking
+- name
+- email
+- date
+- time
+- guests
+- requests
+- status
+
+RestaurantInfo
+- address
+- email
+- opening_hours
+
+Relationships:
+- One restaurant → many bookings
+
+## Project Management
+
+GitHub Projects was used to track:
+- To Do
+- In Progress
+- Done
+
 ## Tools & Services
 
 **Development Tools**
@@ -322,6 +358,13 @@ The project uses PostgreSQL as the production database and SQLite3 during develo
 - Heroku
 - PostgreSQL
 - Django Admin
+
+## Security
+
+- CSRF protection
+- Form validation
+- Environment variables
+- Secret keys hidden
 
 **Design Tools**
 
@@ -367,8 +410,8 @@ Verified on:
 
 **User Story 2 — Submit Booking Request**
 
-- Form validation with success
-- Data saved with success
+- Form validation works successfully
+- Data saved successfully
 - Confirmation displayed
 
 **User Story 3 — Admin View Booking Requests**
@@ -392,9 +435,9 @@ Verified on:
 
 ## HTML, CSS and JShint validation
 
-![HTML](static/images/html-validation.webp)
-![CSS](static/images/CSS-validation.webp)
-![JAVASCRIPT](static/images/javascript-validation.webp)
+![HTML Validation](static/images/html-validation.webp)
+![CSS Validation](static/images/CSS-validation.webp)
+![JavaScript](static/images/javascript-validation.webp)
 
 ## Known Issues
 
@@ -429,9 +472,34 @@ The project is deployed using Heroku.
 6. Deploy from GitHub.
 7. Open the deployed application.
 
-**Clone Repository**
+## Local Development
 
-git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+1. Clone repository
+2. Create virtual environment
+3. Install requirements
+4. Run migrations
+5. Start server
+
+```bash
+git clone https://github.com/isadoraspirov/restaurant_booking
+cd restaurant_booking
+
+python -m venv venv
+source venv/bin/activate
+
+pip install -r requirements.txt
+
+python manage.py migrate
+python manage.py runserver
+```
+
+## Environment Variables
+
+Required variables:
+
+SECRET_KEY= Django secret key
+DATABASE_URL= PostgreSQL connection
+DEBUG= True/False
 
 **Fork Repository**
 
@@ -443,16 +511,16 @@ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
 
 **Content**
 
-- Restaurant content created for educational purposes.
+Restaurant content was created for educational purposes.
 
 **Media**
 
-Images generetade via AI.
+Images generated using AI.
 
 **Technologies**
 
-Django Documentation
-Bootstrap Documentation
+- Django Documentation
+- Bootstrap Documentation
 
 **Artificial Intelligence Usage**
 
@@ -465,6 +533,10 @@ Artificial Intelligence (AI) tools were used during the development of this proj
 - Assisted with planning user stories and testing scenarios.
 
 All code implementation, testing, debugging, and final decisions were completed and reviewed manually. AI-generated suggestions were evaluated and adapted to fit project requirements.
+
+## License
+
+This project is for educational purposes.
 
 **Acknowledgements**
 
