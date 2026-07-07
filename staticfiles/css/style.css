@@ -89,6 +89,44 @@ body {
     color: var(--secondary-color);
 }
 
+/* Button */
+
+.custom-button-filled {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0;
+    font-family: var(--secondary-font);
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.custom-button-filled:hover {
+    background-color: var(--gold-color);
+    color: var(--secondary-color);
+}
+
+/* Delete button */
+
+.custom-button-delete {
+    background: transparent;
+    color: #b65d4d;
+    border: 2px solid #b65d4d;
+    padding: 10px 20px;
+    border-radius: 0;
+    font-family: var(--secondary-font);
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.custom-button-delete:hover {
+    background-color: #b65d4d;
+    color: var(--secondary-color);
+}
+
 /* HERO SECTION */
 
 .hero-section {

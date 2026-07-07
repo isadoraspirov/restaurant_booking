@@ -1,6 +1,8 @@
+from django.contrib import messages
 from django.shortcuts import (
     render,
-    get_object_or_404
+    get_object_or_404,
+    redirect,
 )
 
 from .forms import BookingForm
@@ -15,27 +17,18 @@ def booking_home(request):
 def create_booking(request):
 
     if request.method == "POST":
-
         form = BookingForm(request.POST)
 
         if form.is_valid():
-
             restaurant = InfoRestaurant.objects.first()
 
             booking = form.save(commit=False)
             booking.restaurant = restaurant
             booking.save()
 
-            return render(
-                request,
-                "booking/booking_success.html",
-                {
-                    "booking": booking
-                }
-            )
+            return render(request, "booking/booking_success.html", {"booking": booking})
 
     else:
-
         form = BookingForm()
 
     return render(
@@ -44,38 +37,25 @@ def create_booking(request):
         {
             "form": form,
             "editing": False,
-        }
+        },
     )
 
 
 def edit_booking(request, booking_id):
 
-    booking = get_object_or_404(
-        BookingRequest,
-        id=booking_id
-    )
+    booking = get_object_or_404(BookingRequest, id=booking_id)
 
     if request.method == "POST":
-
-        form = BookingForm(
-            request.POST,
-            instance=booking
-        )
+        form = BookingForm(request.POST, instance=booking)
 
         if form.is_valid():
-
             updated_booking = form.save()
 
             return render(
-                request,
-                "booking/booking_success.html",
-                {
-                    "booking": updated_booking
-                }
+                request, "booking/booking_success.html", {"booking": updated_booking}
             )
 
     else:
-
         form = BookingForm(instance=booking)
 
     return render(
@@ -85,5 +65,20 @@ def edit_booking(request, booking_id):
             "form": form,
             "booking": booking,
             "editing": True,
-        }
+        },
     )
+
+
+def delete_booking(request, booking_id):
+
+    booking = get_object_or_404(
+        BookingRequest,
+        id=booking_id
+    )
+
+    if request.method == "POST":
+        booking.delete()
+        messages.success(request, "Your booking has been successfully deleted.")
+        return redirect("home")
+
+    return redirect("edit_booking", booking_id=booking.id)
