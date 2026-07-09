@@ -17,15 +17,16 @@
 
 The Booking Table is a restaurant booking website project designed to showcase full-stack web development skills using Django, HTML, CSS, Bootstrap, JavaScript, and database integration. The website provides users with a simple and convenient way to explore the restaurant menu, learn about the restaurant, and reserve tables online.
 
-The project focuses on usability, responsive design, and efficient booking management. Users can browse menu categories, view restaurant information, and complete an online reservation form. The website is designed as an educational portfolio project demonstrating practical implementation of a booking system and CRUD functionality.
+The project focuses on usability, responsive design, and efficient booking management. Users can browse menu categories, view restaurant information, and complete an online reservation form. The application demonstrates full CRUD functionality by allowing users to create, read (booking confirmation), update, and delete restaurant reservations.
 
-The purpose of this project is to demonstrate how a restaurant website can combine an attractive user interface with dynamic functionality through Django. The site allows users to make reservations while providing restaurant information in a clear and accessible format. It showcases skills such as database management, form handling, validation, responsive layouts, and user-focused design.
+The purpose of this project is to demonstrate how a restaurant website can combine an attractive user interface with dynamic functionality through Django. The website allows users to create, view confirmation details, edit, and delete restaurant reservations while providing restaurant information in a clear and accessible format. It showcases skills such as database management, form handling, validation, responsive layouts, and user-focused design.
 
 **Project Focus**
 
 - Creating a responsive and accessible restaurant website.
 - Implementing a booking system using Django forms and models.
-- Practicing database management and CRUD functionality.
+- Practicing full CRUD functionality using Django models and forms.
+- Allowing users to create, update, and delete their bookings.
 - Providing an intuitive user experience through clear navigation and modern design.
 - Demonstrating server-side rendering and dynamic content management.
 
@@ -41,11 +42,13 @@ The purpose of this project is to demonstrate how a restaurant website can combi
 - View the restaurant menu and available dishes.
 - Learn about restaurant contact details and opening hours.
 - Reserve a table quickly and easily online.
-- Receive confirmation after successfully submitting a reservation.
+- Edit an existing reservation if plans change.
+- Cancel a reservation when it is no longer required.
+- Receive confirmation after creating or deleting a booking.
 
 ## Strategy
 
-The strategy focuses on creating an elegant and welcoming restaurant website that encourages users to make reservations. The design prioritises simplicity, accessibility, and responsiveness across all devices. Django functionality supports form submission, booking confirmation, and database integration while maintaining a smooth user experience.
+The strategy focuses on creating an elegant and welcoming restaurant website that encourages users to make reservations. The design prioritises simplicity, accessibility, and responsiveness across all devices. Django functionality supports booking creation, editing, deletion, confirmation pages, and database integration while maintaining a smooth user experience.
 
 ## Scope
 
@@ -58,6 +61,7 @@ The strategy focuses on creating an elegant and welcoming restaurant website tha
 - Restaurant contact information section.
 - Opening hours section.
 - Responsive design using Bootstrap.
+- Users can edit or cancel an existing booking.
 
 **Nice to Have**
 
@@ -94,8 +98,9 @@ The website structure guides users from discovering the restaurant to completing
 
 - Confirmation message.
 - Reservation details summary.
-- Button to edit reservation.
-- Button back to homepage.
+- Edit Reservation button.
+- Delete Reservation button.
+- Return Home button.
 
 **Footer**
 
@@ -128,14 +133,16 @@ Sticky navigation bar containing:
 ### Confirmation Page
 
 - Booking Summary
-- Return Home Button
 - Edit Reservation Button
+- Delete Reservation Button
+- Return Home Button
 
 ### Interaction
 
 - Navigation links for smooth browsing.
 - Form validation for reservation submissions.
 - Dynamic booking confirmation page.
+- Users can edit or delete existing bookings from the confirmation page.
 - Responsive menu cards with hover effects.
 - Mobile-friendly navigation menu.
 
@@ -186,7 +193,7 @@ As a customer I can submit a booking request form so that I can request a table 
 - Form cannot be submitted with empty required fields.
 - Validation errors are shown if invalid data is entered.
 - On successful submission, request is saved in the database.
-- User sees a success message after submission and can edit reservation details.
+- User sees a confirmation page after submission and can edit or delete the reservation.
 
 ### User Story 3: Admin View Booking Requests
 
@@ -224,6 +231,19 @@ As an admin I can update restaurant information so that the website stays accura
 - Admin can edit restaurant details (address, phone, email).
 - Admin can update opening hours.
 - Changes are reflected on the public website.
+
+### User Story 6: Cancel a Booking
+
+**Story:**
+
+As a customer I can cancel my reservation so that I no longer occupy a table I don't intend to use.
+
+**Acceptance Criteria**
+
+- User can access a Delete Booking button.
+- Clicking Delete removes the booking.
+- Booking is deleted from the database.
+- User receives confirmation that the booking has been cancelled.
 
 ## Features 
 
@@ -288,6 +308,15 @@ As an admin I can update restaurant information so that the website stays accura
 - Users receive a confirmation page after successful submission.
 - Reservation details are displayed clearly.
 - Includes navigation back to the homepage.
+
+**Booking Cancellation**
+
+![Booking Cancellation](static/images/booking-cancellation.webp)
+
+- Users can delete an existing reservation directly from the booking confirmation page.
+- A confirmation page informs the user that the booking has been successfully deleted.
+- Prevents outdated reservations from remaining in the database.
+- Improves the overall booking management experience.
 
 **Footer**
 
@@ -381,7 +410,7 @@ GitHub Projects was used to track:
 
 The website was manually tested across multiple browsers and devices.
 
-![Manual Testing](static/images/manual-testing.webp)
+![Manual Testing](static/images/manual-testing-list.webp)
 
 **Browser Compatibility**
 
@@ -428,6 +457,12 @@ Verified on:
 
 - Admin edits details
 - Website updates
+
+**User Story 6 — Cancel Booking**
+
+- Delete button available
+- Booking removed successfully
+- Confirmation message displayed
 
 ## Automated Testing with Lighthouse
 
